@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="UTF-8"/>
+       <title>Project Explorer </title>
+       <link rel="stylesheet" href="bootstrap.min.css"/>
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+            <a class="navbar-brand" href="#">Project Explorer</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" name="searchForm" type="text" placeholder="Search Projects" aria-label="Search">
+                <button class="btn btn-outline-light btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-outline-light btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
+
+              </form>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Signup</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Login</a>
+                </li>
+              </ul>
+              
+            </div>
+          </nav>
+        <main>
+            <div class="jumbotron">
+                <div class="container">
+                <div class="mx-auto my-5" style="width:700px;height: 500px;">
+                <div class="w-80 p-4" style="background-color:white;">
+            <h2>Submit Project</h2>
+            <section>
+                <form name="submitProject">
+                    <div> Project Name:<section> <input placeholder="Enter project name" class="form-group form-control form-label" type="text"name="name"></section></div>
+                    <div> Project Abstract: <section><textarea class="form-group form-control form-label"type="text" name="abstract"></textarea></section></div>
+                    <div> Author(s):<section> <input placeholder="Enter author names (seperated by comma)" class="form-group form-control form-label" type="text"name="authors"></section></div>
+                    <div> Tag(s):<section> <input placeholder="Use # to tag project with different topics(e.g #javascript,#mongodb)" class="form-group form-control form-label" type="text"name="tags"></section></div>
+                    <div><section><button class="btn btn-primary"type="submit">Continue</button></section></div>
+                </form>
+            </section>
+            </div>
+            </div>
+            </div>
+            </div>
+        </main>
+    </body>
+    <div class="d-flex justify-content-end">
+        <footer>
+            <p class="card-footer">  Project Explorer &copy; 2021. Edconnect </p>
+             </footer>
+             </div>
+    </html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="UTF-8"/>
+       <title>Project Explorer </title>
+       <link rel="stylesheet" href="bootstrap.min.css"/>
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+            <a class="navbar-brand" href="#">Project Explorer</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" name="searchForm" type="text" placeholder="Search Projects" aria-label="Search">
+                <button class="btn btn-outline-light btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-outline-light btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
+
+              </form>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Signup</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Login</a>
+                </li>
+              </ul>
+              
+            </div>
+          </nav>
+        <main>
+            <div class="jumbotron">
+                <div class="container">
+           <h3>Project Gallery</h3>
+           <section>
+               <div class="bg-light p-3">
+               <form name="searchForm">
+                   <div class="form-row">
+                   <div class="form-group col-sm-6">
+                       <input class="form-group form-label form-control form-control-lg" type="text" name="searchTerm"placeholder="Project Name, Authors, Abstract, Tags">
+                   </div>
+                   <div class="form-group col-sm-1.5">
+                       <p class="form-group form-label form-control-lg">Search By</p>
+                   </div>
+                   <div class="form-group col-sm-2">
+                     <select  class="form-group form-label form-control form-control-lg"name="searchType">
+                         <option tpye="name">Name </option>
+                         <option tpye="abstract">Abstract </option>
+                         <option tpye="authors">Authors </option>
+                         <option tpye="tags">Tags </option>
+                     </select>
+                   </div>
+                   <div class="form-group col-sm-2"><button class="btn btn-lg, and btn-primary"type="submit" value="Search">Submit</button></div>
+               </div>
+                </form>
+               </div>
+           </section>
+           <section>
+               <h5>Search Result (0 Results)</h5>
+               <div class="jumbotron">
+               <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body text-center">
+                   <h5 class="card-title">Mathematics for Computer Science(2021)</h5>
+                   <h6 class="card-subtitle"> Neil De Grasse Tyson ; Barry Kripke ; Howard Wolowitz</h6>
+                       <p> Computer science, the study of computers and computing, including their theoretical and algorithmic foundations, hardware and software, and their uses for processing information. The discipline of computer science includes the study of algorithms and data structures, computer and network design, modeling data and information processes, and artificial intelligence. Computer science draws some of its foundations from mathematics and engineering and therefore incorporates techniques from areas such as queueing theory, probability and statistics, and electronic circuit design. Computer science also makes heavy use of hypothesis testing and experimentation during the conceptualization, design, measurement, and refinement of new algorithms, information structures, and computer architectures.</p>
+                  <p style="color:#007bff!important"> #Facebook, #Google, #Edconnect, #Twitter, #Stripe, #Microsoft, #Html, #Bootstrap, #CSS, #Javascript</p>
+                   </div>
+                   </div>
+                   </div>
+                   </div>
+               </div>
+                </div>
+           </section>
+        </div>   
+        </div>
+        </main>
+    </body>
+    <div class="d-flex justify-content-end">
+        <footer>
+            <p class="card-footer">  Project Explorer &copy; 2021. Edconnect </p>
+             </footer>
+             </div>
+</html>
+
+

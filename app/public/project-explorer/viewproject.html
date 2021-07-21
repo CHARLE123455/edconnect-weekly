@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="UTF-8"/>
+       <title>Project Explorer </title>
+       <link rel="stylesheet" href="bootstrap.min.css"/>
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+            <a class="navbar-brand" href="#">Project Explorer</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" name="searchForm" type="text" placeholder="Search Projects" aria-label="Search">
+                <button class="btn btn-outline-light btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-outline-light btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
+
+              </form>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Signup</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Login</a>
+                </li>
+              </ul>
+              
+            </div>
+          </nav>
+        <main>
+            <div class="jumbotron">
+                <div class="container">
+            <section>
+                <h3>Project 1</h3>
+<div class="row">
+    <div class="col">
+        Created By 
+    </div>
+    <div class="col">
+        Date Created
+    </div>
+    <div class="col">
+        Last Updated
+    </div>
+    <div class="col">
+        <button class="d-flex justify-content-end btn btn-primary " type="submit">Edit Project</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        Charles Owuala
+    </div>
+    <div class="col">
+        06/04/2021
+    </div>
+    <div class="col">
+        07/06/2021
+    </div>
+    <div class="col">
+        
+    </div>
+</div>
+
+ </section>  
+
+ <div class="row">
+     <div class="col">
+         <div class="card">
+             <div class="card-body">
+        <h4 class="card-title">Project Abstract</h4>
+        <form name="editProject">
+            
+            <div><section><textarea class="form-group form-control form-label" type="text" name="abstract"></textarea></section></div>
+            <div><strong> Comments:</strong> <section><textarea class="form-group form-control form-label" placeholder="Leave a comment" type="text" name="abstract"></textarea></section></div>
+            
+        </form>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <div><p style="text-align: center;">No comments added yet</p></div>
+</div>
+</div>
+     </div>
+     <div class="col">
+         <div class="card">
+             <div class="card-body">
+        <h4 class="card-title">Project Details</h4>
+        <div class="card-header">
+          Author(s)
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">Charles Owuala</p>
+        <div class="card-footer text-muted">#Edconnect;#javascript</div>
+      </div>
+            <div class="card-header">
+                Project Files
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"></h5>
+              <p class="card-text">No file uploaded yet</p>
+            </div>
+          </div>
+    </div>
+    </div>
+    </div>
+ </div>
+            </div>
+            </div>
+        </main>
+    </body>
+    <div class="d-flex justify-content-end">
+        <footer>
+            <p class="card-footer">  Project Explorer &copy; 2021. Edconnect </p>
+             </footer>
+             </div>
+</html>
