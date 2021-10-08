@@ -14,38 +14,52 @@ class User {
     }
 
     getFullName() {
-        let userName = firstName +' ' + lastName;
-        return userName;
+        return this.firstName +' ' + this.lastName;
     }
 }
 
 class Users extends DataModel {
     authenticate(email, password) {
-    let validUser = this.data.find((element) => element.email === email && element.password === password)
-      return (validUser? true : false); 
-    }
-
+           if (this.data.some(user => user.email === email && user.password === password)) {
+               return true;
+           } else {
+               return false;
+           }
+       }
     getByEmail(email) {
-    let getEmail = this.data.find(ele => ele.email === email)
-    return getEmail? getEmail : null;
+        var result = this.data.find(obj => {
+            return obj.email === email
+          }) || null
+        return result;
     }
 
     getByMatricNumber(matricNumber) {
-        let element = this.data.find(ele => ele.matricNumber === matricNumber)
-        return element? element : null;
+        var result = this.data.find(obj => {
+            return obj.matricNumber === matricNumber
+          }) || null
+        return result; 
     }
-
     validate(obj) {
+        this.errors = []
         let value = true;
         for(let prop in obj ){
             if(obj[prop] === null){
-                value = false;
-            }
+                this.errors.push(`${prop} should not be empty`)
+            } else if (this.data.some(user => user.email === obj[prop])) {
+                this.errors.push("A user with the specified email address already exists");
+            } else if (this.data.some(user => user.matricNumber === obj[prop])) {
+                this.errors.push("A user with specified matric number already exists")
+            } else if (obj.password.length < 7) {
+                this.errors.push("Password should have at least 7 characters");
+            } 
         }
-      let valEmail = this.data.find(ele => ele.email === obj.email)
-      let valMatric = this.data.find(ele => ele.matricNumber === obj.matricNumber)
-      let valPassword = obj.password.length >= 7;
-      return value && valPassword && !valEmail && !valMatric;
+
+        if (this.errors.length == 0) {
+            return true;
+        } else {
+            return false;
+        }
+      
     }
 }
 

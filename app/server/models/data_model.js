@@ -9,16 +9,15 @@ class DataModel {
     }
 
     getById(id) {
-        let getId = this.data.find(ele => ele.id === id)
-   if(!getId){
-       return null;
-   }
-   else{
-       return getId;
-   }
+        let result = this.data.find(obj => obj.id === id) 
+        if(!result){
+            return null;
+        }else{
+            return result;
+        }
+      
+    }
 
-     
-   }
     save(obj) {
         if (this.validate(obj)) {
             this.data.push(obj);
@@ -26,29 +25,41 @@ class DataModel {
         }
         return false;
     }
-
+    
     update(obj, id) {
-        let elementsIndex = this.data.find(element => element.id == id )
-        if(!elementsIndex){
+        let found = false;
+        for (let user of this.data) {
+            for (let prop in user) {
+                if (user[prop] === id) {
+                    found = true;
+                    Object.assign(user,obj);
+                }
+            }
+        }
+        
+        if (found === true) {
+            return true;
+        } else {
             return false;
         }
-        for(let key in obj){
-            elementsIndex[key] = obj[key];
+    }
+    delete(id) {
+        
+        let found = false;
+
+        for (let obj of this.data) {
+            for (let prop in obj) {
+                if (obj[prop] === id) {
+                    found = true;
+                    this.data = this.data.filter(user => user.id != id)                }
+            }
         }
-        return true;
-    }
-
-    delete(id){
-        let user = this.data.find(item => item.id === id);
-
-    let index = this.data.indexOf(user);
-    if (user) {
-        this.data.splice(index, 1);
-        return true;
-    }
-    return false;
-
-
+        if (found === true) {
+            return true;
+        } else {
+            return false;    
+        }
+        
     }
 
     // this method will be overriden in the sub classes
