@@ -23,7 +23,7 @@ assert(users.save(jerry) === false, `saving a user should return false for an in
 assert(users.save(empty) === false, `saving a user should return false for an invalid user : empty properties`);
 assert(users.errors.length === 8, `error array should have multiple errors when attempting to save a user with empty properties`);
 assert(users.getAll().length === 2, `users.getAll() method should return 2`);
- assert(users.getById(john.id).getFullName() === 'john doe');
+assert(users.getById(john.id).getFullName() === 'john doe');
 assert(users.getByEmail(john.email).getFullName() === 'john doe');
 assert(users.getByMatricNumber(john.matricNumber).getFullName() === 'john doe');
 assert(users.authenticate(john.email, john.password) === true);
