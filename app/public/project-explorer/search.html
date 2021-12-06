@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel= "stylesheet" href="css/bootstrap.min.css">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <title>Home</title>
+      </head>
+      <nav id = 'headerNav' class="navbar navbar-expand-md navbar-dark bg-primary">
+        <div class="container">
+         <div class="navbar-header" >
+             <a class="navbar-brand" href="index.html">Project Explorer</a>
+         </div>
+           <form class="navbar navbar-left form-inline my-2 my-lg-0" name="searchForm">
+           <input class="navbar navbar-left form-control mr-sm-2" placeholder="Search Projects"/>
+           <input type="submit" class="btn btn-outline-light my-2 my-sm-0" value="Search">
+       </form>
+       <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+              <li><a class = 'nav-link' href='viewproject.html'>Projects</a></li>
+               <li><a class="nav-link" href="createproject.html">Submit</a></li>
+           </ul>
+       </div>
+           <ul id = 'userStatus' class="nav navbar-nav navbar-right">
+               <li><a class="nav-link" href="register.html">Sign up</a></li>
+       
+               <li><a class="nav-link" href="login.html">Login</a></li>
+               </ul>
+       </div>
+       </nav>
+<body>
+    <div class="container m-5">
+    <h2>Project Gallery</h2>
+    <div class="container p-3 mt-2 bg-light">
+        <div class="form-row">
+        <div class="form-group col-md-6 pt-4">
+            <form>
+            <input type="text"  class="form-control form-control-lg form-label" name="searchTerm" placeholder="Search project name, authors, abstract, tags"/>     
+            </form>
+        </div>
+       <div class="form-group col-md-2 pt-4 pr-0">
+           <form>
+           <input type="submit" class="form-control form-control-lg form-label bg-light" name="searchTerm" value="Search by"/>
+           </form>
+        </div>
+       <div class="form-group col-md-2 pt-4 pl-0">
+           <form>
+        <select name="searchType" class="form-control-lg">
+            <option selected>Name</option>
+        </select>
+           </form>
+       </div>
+        <div class="form-group col-md-2 pt-4 ml-n5">
+            <form>
+            <button type="button" class="btn btn-lg btn-primary">
+                Submit
+            </button>
+            </form>
+        </div>   
+    </div>   
+        </div>
+ </div>
+    </div>
+    <div class="container m-5">
+            <p><strong>All Projects</strong>(0 results)</p>
+               <h5>Search Result (0 Results)</h5>
+               <div class="jumbotron">
+               <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body text-center">
+                   <h5 class="card-title">Mathematics for Computer Science(2021)</h5>
+                   <h6 class="card-subtitle"> Neil De Grasse Tyson ; Barry Kripke ; Howard Wolowitz</h6>
+                       <p> Computer science, the study of computers and computing, including their theoretical and algorithmic foundations, hardware and software, and their uses for processing information. The discipline of computer science includes the study of algorithms and data structures, computer and network design, modeling data and information processes, and artificial intelligence. Computer science draws some of its foundations from mathematics and engineering and therefore incorporates techniques from areas such as queueing theory, probability and statistics, and electronic circuit design. Computer science also makes heavy use of hypothesis testing and experimentation during the conceptualization, design, measurement, and refinement of new algorithms, information structures, and computer architectures.</p>
+                  <p style="color:#007bff!important"> #Facebook, #Google, #Edconnect, #Twitter, #Stripe, #Microsoft, #Html, #Bootstrap, #CSS, #Javascript</p>
+                   </div>
+                   </div>
+                   </div>
+                   </div>
+               </div>
+                </div>
+           </section>
+        </div>   
+        </div>
+        </main>
+        <script src ="js/app.js"></script>
+    </body>
+    <div class="d-flex justify-content-end">
+        <footer>
+            <p class="card-footer">  Project Explorer &copy; 2021. Edconnect </p>
+             </footer>
+             </div>
+</html>
+
+
