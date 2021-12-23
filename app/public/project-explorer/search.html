@@ -1,81 +1,214 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Project Explorer App</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-  </head>
-  <body>
-    <header id = "header" class = "navbar bg-primary text-white text-decoration-none">
-      <div id = "nav-right" class = "d-flex justify-items-space-between align-items-center">
-         <h1 id = "header-title">Project Explorer</h1>
-         <form id = "form" class="form-inline" name = "searchForm">
-            <input class = "form-control" type="text" name="text" placeholder="Search Projects">
-            <button class  = "btn btn-outline-light" value="Search">Search</button> 
-            <a href="#">submit</a>
-         </form>
-      </div>
-      <ul class="navbar nav  d-flex align-items-center" id="newNav">
-        <li class="nav-item">
-            <a class="nav-link" href="register.html">Sign Up</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="login.html">Login</a>
-        </li>
-    </ul>
 
-    </header>
-    <main>
-        <section name = "search" class = "container mb-5 mt-4">
-            <div class = "d-flex align-items-center" id = "profileHeader">
-              <h3><strong>Project Gallery</strong></h3>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- The Navbar -->
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-secondary">
+        <a href="index.html" class="navbar-brand">Project Explorer</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#responsive-nav" aria-controls="#responsive-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+        <div class="collapse navbar-collapse" id="#responsive-nav">
+            <form class="form-inline my-2 my-lg-0 pull-xs-left" method="POST" action="" enctype="text/plain">
+                <input class="form-control" type="search" aria-label="Search" placeholder="Search Projects">&nbsp;
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="search.html" title="Projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="createProject.html" title="Submit Project">Submit</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav mr-sm-2">
+                <li class="nav-item">
+                    <a class="nav-link" href="register.html" title="Sign up">Sign up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html" title="Login Page">Login</a>
+                </li>
+
+                <span id="username" style="display: none;"> </span>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#" title="SignOut" style="display: none;" id="logout">Logout</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- The Main body -->
+
+
+
+    <div class="container">
+        <p id="searchP1">Project Gallery</p>
+
+        <div class="row" id="searchRow1">
+
+            <div class="col">
+
+                <form class="form-inline" method="POST" action="" enctype="text/plain">
+
+                    <div class="form-group">
+
+                        <input class="form-control form-control-lg" name="searchTerm" size="45" type="text" placeholder="Search Project name, authors, abstract, tags">&nbsp;&nbsp;&nbsp;
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <button class="btn btn-lg" role="button" id="searchByButton">Search
+                            by</button>
+
+                        <select class="form-control form-control-lg" name="authorName">
+                            <option>Name</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        &nbsp;&nbsp;<button class="btn btn-primary btn-lg" type="submit">Submit</button>
+
+                    </div>
+
+                </form>
+
             </div>
-            <div class = "form-row d-flex align-items-center bg-light text-secondary p-3">
-              <form class = "col  ">
-                <input type="text" name = "searchTerm" class ="form-control form-control-lg" placeholder = "Search Project, name, authors, abstract, tags">  
-              </form>
-              <div class = "col-3 d-flex align-items-center">
-                <labe class = "btn form-control col-5 form-control-md bg-light" for="searchBy" >Search by</labe>
-                <select name="searchBy" id="searchBy" class="form-control col-6 form-select form-control-lg mr-3">
-                <option value="name">Name</option>
-                </select>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="container">
+        <p id="searchP2"><strong>All Projects</strong> <small class="text-muted">(4 results)</small></p>
+
+        <div class="row" id="searchRow2">
+
+            <div class="col-md-3 order-4">
+
+                <div class="card" id="searchRow2Card1">
+
+                    <div class="card-block">
+
+                        <h6 class="card-title" id="searchH6">Project 1
+                        </h6>
+
+                        <small class="text-muted">James Li, Ade Brian</small>
+
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis repudiandae obcaecati tempora quasi ex incidunt sunt dignissimos minus.<br>
+
+                            <span class="searchSpanColor">#javascript, #mongodb</span>
+                        </p>
+
+                    </div>
+
+                </div>
+
             </div>
-            <button class = "btn btn-primary btn-lg" value = "submit">Submit</button>
-          </section> 
-      <section class = "container">
-        <div class = "mt-3em d-flex align-items-center">
-          <h3 class = "mr-2em mt-3em">All Projects </h3>
-          <span class = "text-secondary">&thinsp; (0 results)</span>
+
+            <div class="col-md-3 order-3">
+
+                <div class="card searchCard">
+
+                    <div class="card-block">
+
+                        <h6 class="card-title searchCardTitleH6">Project 2
+                        </h6>
+
+                        <small class="text-muted">Fried Lim, Tola Daniel</small>
+
+                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae vitae magni minima. Quisquam, hic debitis? Voluptates, minima iure.<br>
+
+                            <span class="searchSpanColor">#ejs, #ci</span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 order-2">
+
+                <div class="card searchCard">
+
+                    <div class="card-block">
+
+                        <h6 class="card-title searchCardTitleH6">Project 3
+                        </h6>
+
+                        <small class="text-muted">Ben Rice, Ade Sola</small>
+
+                        <p class="card-text">Webtwo ipsum orkut reddit meebo skype vimeo jajah spock empressr zimbra, mobly napster hipmunk prezi chartly bitly Zillow lala, sifteo.<br>
+
+                            <span class="searchSpanColor">#css, #html</span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 order-1">
+
+                <div class="card searchCard">
+
+                    <div class="card-block">
+
+                        <h6 class="card-title searchCardTitleH6">Project 4
+                        </h6>
+
+                        <small class="text-muted">Henry James, Bola Ade</small>
+
+                        <p class="card-text">Swearem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque accumsan nisl, a mattis eros vestibulum et ligula porttitor.<br>
+
+                            <span class="searchSpanColor">#yaml, #ejs</span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-        <div class = "row">
-        <div class = "col-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Project title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Author 1, Author 2</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">#html</a>
-              <a href="#" class="card-link">#css</a>
-              <a href="#" class="card-link">#JavaScript</a>
-          </div>
+
+    </div>
+
+
+    <footer class="container">
+
+        <div class="footerDiv">
+            <p class="text-muted">
+                Project Explorer &#64; 2020 <strong>Great-NGO Edconnect </strong>
+            </p>
         </div>
-      </div>
-        <div class = "col-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Project title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Author 1, Author 2</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">#html</a>
-              <a href="#" class="card-link">#css</a>
-              <a href="#" class="card-link">#JavaScript</a>
-          </div>
-        </div>
-      </div>
-      </div>
-      </section>
-    </main>
-    <footer id = "footer" class = "container bg-light"> <span id = "footer-span" class = "text-muted"> Project Explorer &#169; 2020 &middot; &VeryThinSpace;</span> <strong> Edconnect </strong> </footer>
-    <script src="./js/app.js"></script>
-  </body>
+    </footer>
+
+    <script src="js/app.js">
+    </script>
+</body>
+
 </html>

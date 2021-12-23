@@ -1,136 +1,177 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Project Explorer App</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <header
-      id="header"
-      class="navbar bg-primary text-white text-decoration-none"
-    >
-      <div
-        id="nav-right"
-        class="d-flex justify-items-space-between align-items-center"
-      >
-        <h1 id="header-title">Project Explorer</h1>
-        <form id="form" class="form-inline" name="searchForm">
-          <input
-            class="form-control"
-            type="text"
-            name="text"
-            placeholder="Search Projects"
-          />
-          <button class="btn btn-outline-light" value="Search">Search</button>
-          <a href="#">submit</a>
-        </form>
-      </div>
-      <ul class="navbar nav d-flex align-items-center" id="newNav">
-        <li class="nav-item">
-          <a class="nav-link" href="register.html">Sign Up</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="login.html">Login</a>
-        </li>
-      </ul>
-    </header>
-    <main id="container" class="container">
-      <div class="jumbotron">
-        <h1>Welcome to Project Explorer</h1>
-        <p>
-          Project Explorer is a repository for filan year projects across all
-          departments at your institution. you can submit oyur project and
-          search projects submited by others to learn from.
-        </p>
-        <div>
-          <a
-            href="register.html"
-            class="btn btn-primary"
-            type="button"
-            value="Get Started"
-          >
-            Get Started
-          </a>
-          <a
-            href="login.html"
-            class="btn btn-secondary"
-            type="button"
-            value="Login"
-          >
-            Login
-          </a>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-secondary" id="mainNavbar">
+        <a href="index.html" class="navbar-brand">Project Explorer</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navHeaderCollapse" aria-controls="#navHeaderCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="#navLinks">
+            <form class="form-inline my-2 my-lg-0 pull-xs-left" method="POST" action="" enctype="text/plain">
+                <input class="form-control" type="search" aria-label="Search" placeholder="Search Projects">&nbsp;
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="search.html" title="Projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="createProject.html" title="Submit Project">Submit</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav mr-sm-2">
+                <li class="nav-item">
+                    <a class="nav-link" href="register.html" title="Sign up">Sign up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html" title="Login Page">Login</a>
+                </li>
+
+                <span id="username" style="display: none;"> </span>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#" title="SignOut" style="display: none;" id="logout">Logout</a>
+                </li>
+
+            </ul>
         </div>
-      </div>
-      <section class="row showcase">
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Project title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Author 1, Author 2</h6>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="card-link">#html</a>
-              <a href="#" class="card-link">#css</a>
-              <a href="#" class="card-link">#JavaScript</a>
-            </div>
-          </div>
+    </nav>
+
+    <!-- The Body -->
+    <div class="container">
+
+        <div class="jumbotron">
+
+            <h2>Welcome to Project Explorer</h2>
+
+            <p class="lead">
+
+                Project Explorer is a repository for final year projects across all departments at your institution. You can submit your project and search projects submitted by others to learn from.
+
+            </p>
+
+            <p>
+                <a class="btn btn-primary" href="register.html">Get Started</a>
+                <a class="btn btn-secondary" href="login.html">Login</a>
+            </p>
+
         </div>
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Project title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Author 1, Author 2</h6>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="card-link">#html</a>
-              <a href="#" class="card-link">#css</a>
-              <a href="#" class="card-link">#JavaScript</a>
-            </div>
-          </div>
+    </div>
+
+
+
+    <div class="container">
+
+        <div class="row showcase" id="showcase">
+
+
         </div>
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Project title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Author 1, Author 2</h6>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="card-link">#html</a>
-              <a href="#" class="card-link">#css</a>
-              <a href="#" class="card-link">#JavaScript</a>
-            </div>
-          </div>
+
+    </div>
+
+    <footer class="container">
+
+        <div class="footerDiv">
+
+            <p class="text-muted">
+
+                Project Explorer &#64; 2020 <strong>Great-NGO Edconnect </strong>
+
+            </p>
+
         </div>
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Project title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Author 1, Author 2</h6>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="card-link">#html</a>
-              <a href="#" class="card-link">#css</a>
-              <a href="#" class="card-link">#JavaScript</a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer id="footer" class="container bg-light">
-      <span id="footer-span" class="text-muted">
-        Project Explorer &#169; 2020 &middot; &VeryThinSpace;
-      </span>
-      <strong>Edconnect</strong>
+
     </footer>
-    <script src="./js/app.js"></script>
-  </body>
+
+
+    <script src="js/app.js">
+    </script>
+
+    <!-- Optional Bootstrap Javascript -->
+
+
+
+</body>
+
 </html>
+
+
+
+
+
+<!-- <div class="col-md-3 order-4">
+                <div class="card" style="padding: 20px">
+                    <div class="card-block">
+                        <h6 class="card-title" style="font-size: 20px; margin-bottom: 0px; color: dodgerblue">
+                            Project 1
+                        </h6>
+                        <small class="text-muted">James Li, Ade Brian</small>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Assumenda debitis provident eos deleniti labore eius recusandae exercitationem <br>
+                            <span style="color: dodgerblue">#javascript, #mongodb</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 order-3">
+                <div class="card" style="padding: 20px">
+                    <div class="card-block">
+                        <h6 class="card-title" style="font-size: 20px; margin-bottom: 0px; color: dodgerblue">
+                            Project 2
+                        </h6>
+                        
+                        <small class="text-muted">Fried Lim, Tola Daniel</small>
+                        <p class="card-text">Baseball ipsum dolor sit amet swing line drive good eye play error. Left on
+                            base track baseball card
+                            foul line third baseman foul line.<br>
+                            <span style="color: dodgerblue">#ejs, #ci</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 order-2">
+                <div class="card" style="padding: 20px">
+                    <div class="card-block">
+                        <h6 class="card-title" style="font-size: 20px; margin-bottom: 0px; color: dodgerblue">
+                            Project 3
+                        </h6>
+                        <small class="text-muted">Ben Rice, Ade Sola</small>
+                        <p class="card-text">A survey on information transmission in Nigeria, its impact, the problems
+                            associated with it and possible solutions.<br>
+                            <span style="color: dodgerblue">#css, #html</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 order-1">
+                <div class="card" style="padding: 20px">
+                    <div class="card-block">
+                        <h6 class="card-title" style="font-size: 20px; margin-bottom: 0px; color: dodgerblue">
+                            Project 4
+                        </h6>
+                        <small class="text-muted">Henry James, Bola Ade</small>
+                        <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quos in iusto soluta natus earum nesciunt ad saepe impedit aliquam atque.<br>
+                            <span style="color: dodgerblue">#yaml, #ejs</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
